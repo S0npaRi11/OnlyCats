@@ -17,7 +17,8 @@ namespace OnlyCats.Data
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             //base.OnConfiguring(optionsBuilder);
-            if (!optionsBuilder.IsConfigured) {
+            if (!optionsBuilder.IsConfigured)
+            {
                 optionsBuilder.UseSqlite(_configuration.GetConnectionString("DefaultConnection"));
             }
         }
